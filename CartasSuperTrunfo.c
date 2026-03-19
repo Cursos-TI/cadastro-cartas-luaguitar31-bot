@@ -16,9 +16,8 @@ int main() {
   float áreakm²_1 ;// adicionar o perímetro da cidade
   float pib_1;// quantidade do produto interno bruto 
   int pontos_turísticos_1 ;// número de pontos turísticos
-
-
-
+  float densidadePopulacional1;
+  float Pibpercapta1;
 
 // estrutura da carta 2
 
@@ -29,6 +28,8 @@ int main() {
   float áreakm²_2 ;// adicionar o perímetro da cidade
   float pib_2;// quantidade do produto interno bruto 
   int pontos_turísticos_2;// número de pontos turísticos
+  float densidadePopulacional2;
+  float Pibpercapta2;
 
 
   // Área para entrada de dados
@@ -43,12 +44,19 @@ int main() {
   scanf("%s",&código_1);
   printf("Digite o nome da cidade: ");
   scanf("%s", &cidade_1);
+  printf("Digite a área em km²: ");
+  scanf("%f", &áreakm²_1);
   printf("Digite a quantidade da população ,sem uso de ponto ou vírgula:" );
   scanf("%d",&população_1);
   printf("Qual o Produto Interno Bruto da cidade? " );
   scanf("%f", &pib_1);
   printf("Qual a quantidade de pontos turísticos na cidade? ");
   scanf("%d",&pontos_turísticos_1);
+
+    // Área destinada para os cálculos da carta 1 : densidade populacional e Pib per capta.
+
+densidadePopulacional1 = (float)população_1 / áreakm²_1;
+Pibpercapta1 =(float) pib_1 / população_1;
 
   // área para exibição dos dados da carta 1
 
@@ -57,8 +65,10 @@ int main() {
   printf("O código da carta: %s\n", código_1);
   printf("Nome da cidade: %s\n",cidade_1);
   printf("População: %d\n", população_1);
-  printf("PIB: %f\n",pib_1);
-  printf("Pontos turísticos: %d\n\n\n", pontos_turísticos_1);
+  printf("PIB: %.2f\n",pib_1);
+  printf("Pontos turísticos: %d\n", pontos_turísticos_1);
+  printf ("A densidade populacional é:%.2f\n",densidadePopulacional1);
+  printf("O Pib Per capta é:%.2f\n", Pibpercapta1);
 
   printf("Agora iremos preencher os dados da segunda carta!\n\n");
 
@@ -73,6 +83,8 @@ int main() {
   scanf("%s",&código_2);
   printf("Digite o nome da cidade: ");
   scanf("%s", &cidade_2);
+  printf("Digite a área em km²: ");
+  scanf("%f", &áreakm²_2);
   printf("Digite a quantidade da população ,sem o uso de ponto ou vírgula: ");
   scanf("%d",&população_2);
   printf("Qual o Produto Interno Bruto da cidade? ");
@@ -81,6 +93,10 @@ int main() {
   scanf("%d",&pontos_turísticos_2);
 
 
+// Área destinada para os cálculos da carta 2 : densidade populacional e Pib per capta.
+
+       densidadePopulacional2 = (float)população_2 / áreakm²_2;
+       Pibpercapta2 =(float) pib_2 / população_2;
 
    // área para exibição dos dados da carta 2
 
@@ -90,11 +106,12 @@ int main() {
   printf("Nome da cidade: %s\n",cidade_2);
   printf("População: %d\n", população_2);
   printf("PIB: %f\n",pib_2);
-  printf("Pontos turísticos: %d\n\n\n", pontos_turísticos_2);
+  printf("Pontos turísticos: %d\n", pontos_turísticos_2);
+  printf ("A densidade populacional é:%.2f\n",densidadePopulacional2);
+  printf("O Pib Per capta é:%.2f", Pibpercapta2);
 
 
-
-// final da execuçao do programa nível novato.
+// final da execuçao do programa nível aventureiro.
 
 return 0;
 } 
